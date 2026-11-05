@@ -10,6 +10,7 @@
   - name: install rabbitmq server
     dnf:
       name:
+      
       - erlang
       - rabbitmq-server
       state: present
@@ -18,13 +19,7 @@
     service:
       name: rabbitmq-server
       state: started
-      enabled: yes 
-
-
-  # - name: create rabbitmq user
-  #   community.rabbitmq.rabbitmq_user:
-  #     user:
-
+      enabled: yes   
 
   - name: create rabbitmq user 
     community.rabbitmq.rabbitmq_user:
