@@ -8,4 +8,4 @@ catalogue_host: catalogue.aaws.online
 cart_host: cart.aaws.online
 user_host: user.aaws.online
 shipping_host: shipping.aaws.online
-payment_host: payment.aaws.online 
+payments_host: payments.aaws.online 
