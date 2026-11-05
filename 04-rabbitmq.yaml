@@ -7,14 +7,13 @@
       src: rabbitmq.repo
       dest: /etc/yum.repos.d/rabbitmq.repo
 
-  # - name: install rabbitmq server
-  #   dnf:
-  #     name:      
-  #     - erlang
-  #     - rabbitmq-server
-  #     state: present
   - name: install rabbitmq server
-    command: dnf install erlang rabbitmq-server -y
+    dnf:
+      name:      
+      - erlang
+      - rabbitmq-server
+      state: present
+  
 
   - name: start and enable rabbitmq-server
     service:
