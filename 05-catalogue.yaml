@@ -64,7 +64,7 @@
       dest: /etc/yum.repos.d/mongo.repo
 
 
-  - name: install mongodb client_token
+  - name: install mongodb client
     dnf:
       name: mongodb-mongosh
       state: present
@@ -80,6 +80,6 @@
   #  command module not used instaed shell used because redirect in the command. command module will not work.
   - name: load the products
     shell: mongosh --host {{ mongodb_host }} </app/db/master-data.js
-    when:  product_count.stdout == 0
+    when:  product_count.stdout | int == 0
 
    
