@@ -9,3 +9,4 @@ cart_host: cart.aaws.online
 user_host: user.aaws.online
 shipping_host: shipping.aaws.online
 payments_host: payments.aaws.online 
+mysql_root_password: RoboShop@1
