@@ -4,7 +4,7 @@
   vars:
      # ansible-playbook roboshop.yaml -e "instances=['mongodb'], ['redis']"
 
-    instances: [ "mongodb","redis","mysql","rabbitmq","catalogue","cart","user","shipping","payments","frontend"]
+    instances: [ "mongodb","redis","mysql","rabbitmq","catalogue","cart","user","shipping","payment","frontend"]
     action: create
     domain_name: aaws.online
     ami_id: ami-0055977a6e828a4f4
@@ -20,7 +20,7 @@
       region: us-east-1
     loop: "{{ instances }}"
     when: action == "create"
-    register: ec2_output
+    # register: ec2_output
 
   # - name: print ec2  creation output
   #   debug: 

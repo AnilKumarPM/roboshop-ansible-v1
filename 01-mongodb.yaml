@@ -11,7 +11,7 @@
   #   debug:
   #     msg: "{{ app_name }}"
 
-  - name: install mongodb server
+  - name: install mongodb server   
     package:
       name: mongodb-org
       state: present
@@ -28,7 +28,7 @@
       regexp: '127.0.0.1'
       replace: '0.0.0.0'
 
-  - name: restart mongodb
-    service:
-      name: mongod
-      state: restarted
+  # - name: restart mongodb
+  #   service:
+  #     name: mongod
+  #     state: restarted
