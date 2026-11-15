@@ -7,7 +7,7 @@
 
   - name: install nginx
     dnf:
-      name: install nginx
+      name:  nginx
       state: present
 
   - name: start enable nginx
