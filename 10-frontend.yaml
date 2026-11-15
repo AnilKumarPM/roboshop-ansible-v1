@@ -18,10 +18,10 @@
 
   - name: Find all contents inside the directory
     ansible.builtin.find:
-    paths: /usr/share/nginx/html/
-    recurse: false      # Keeps it fast by only selecting top-level items inside the folder
-    hidden: true        # Includes hidden files (e.g., .htaccess)
-    file_type: any      # Finds files, directories, and symlinks
+      paths: /usr/share/nginx/html/
+      recurse: false      # Keeps it fast by only selecting top-level items inside the folder
+      hidden: true        # Includes hidden files (e.g., .htaccess)
+      file_type: any      # Finds files, directories, and symlinks
     register: directory_content
 
   - name: print directory content
