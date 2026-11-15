@@ -6,7 +6,7 @@
     dnf:
       name:
       - python3.14
-      - python3.14 pip
+      - python3.14-pip
       state: present
 
   - name: create roboshop system user
